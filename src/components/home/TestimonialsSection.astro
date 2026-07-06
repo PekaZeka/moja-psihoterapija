@@ -1,0 +1,44 @@
+---
+import { useTranslations } from "@/i18n/utils";
+import type { Lang } from "@/i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const testimonials = [
+  { name: "Dragana", text: t("testimonials.dragana") },
+  { name: "Tanja", text: t("testimonials.tanja") },
+  { name: "Staša", text: t("testimonials.stasa") },
+  { name: "Bogdan", text: t("testimonials.bogdan") },
+];
+---
+
+<section class="py-16 lg:py-24 bg-gradient-to-br from-primary-950 to-primary-900 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-heading text-h2 lg:text-h1 text-center mb-12">
+      {t("testimonials.title")}
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {testimonials.map((item) => (
+        <div class="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-white/10">
+          <svg class="absolute top-4 left-4 w-8 h-8 text-accent-400/40" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151C7.563 6.068 6 8.789 6 11h4v10H0z" />
+          </svg>
+          <blockquote class="relative z-10">
+            <p class="text-white/90 leading-relaxed mb-4 italic pl-8">
+              "{item.text}"
+            </p>
+            <footer class="pl-8">
+              <cite class="not-italic font-heading text-accent-400">{item.name}</cite>
+            </footer>
+          </blockquote>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

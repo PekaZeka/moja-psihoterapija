@@ -1,0 +1,43 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import HeroSection from "@/components/home/HeroSection.astro";
+import IntroSection from "@/components/home/IntroSection.astro";
+import TherapyModes from "@/components/home/TherapyModes.astro";
+import VideoSection from "@/components/home/VideoSection.astro";
+import WhatHappensSection from "@/components/home/WhatHappensSection.astro";
+import HowTherapyWorks from "@/components/home/HowTherapyWorks.astro";
+import TopicCards from "@/components/home/TopicCards.astro";
+import TestimonialsSection from "@/components/home/TestimonialsSection.astro";
+import FAQSection from "@/components/home/FAQSection.astro";
+import { localBusinessSchema } from "@/lib/schema";
+import { faqSchema } from "@/lib/schema";
+
+const lang = "sr";
+---
+
+<PageLayout
+  title="Psihoterapija Beograd"
+  description="Moja psihoterapija - centar za lični, porodični i profesionalni razvoj u Beogradu. Sistemska psihoterapija, individualna terapija, online i uživo. Besplatne konsultacije."
+  lang={lang}
+  alternateUrls={{ sr: "/sr/", en: "/en/" }}
+  schema={[
+    localBusinessSchema(lang),
+    faqSchema([
+      { question: "Gde se nalazite?", answer: "Psihoterapijske usluge pružamo u Beogradu, na Vračaru. Organizujemo i online seanse." },
+      { question: "Koliko traje seansa?", answer: "Jedna seansa traje 50 minuta za pojedinca i 60 minuta za parove." },
+      { question: "Koja je cena?", answer: "Cena paketa od 4 termina iznosi od 18.000 do 25.000 dinara." },
+      { question: "Kako funkcioniše online psihoterapija?", answer: "Za komunikaciju koristimo Viber, WhatsApp, Zoom, Google Meet. Svi principi rada su isti." },
+      { question: "Koliko traje psihoterapija?", answer: "Najčešće od par meseci do godinu dana." },
+    ]),
+  ]}
+>
+  <HeroSection lang={lang} />
+  <VideoSection lang={lang} />
+  <TherapyModes lang={lang} />
+  <IntroSection lang={lang} />
+  <WhatHappensSection lang={lang} />
+  <HowTherapyWorks lang={lang} />
+  <TopicCards lang={lang} />
+  <TestimonialsSection lang={lang} />
+  <FAQSection lang={lang} />
+</PageLayout>

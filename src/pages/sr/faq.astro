@@ -1,0 +1,37 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import Breadcrumbs from "@/components/common/Breadcrumbs.astro";
+import FAQSection from "@/components/home/FAQSection.astro";
+import { SITE } from "@/lib/constants";
+import { faqSchema, breadcrumbSchema } from "@/lib/schema";
+import { useTranslations } from "@/i18n/utils";
+
+const lang = "sr";
+const t = useTranslations(lang);
+
+const faqItems = Array.from({ length: 8 }, (_, i) => ({
+  question: t(`faq.q${i + 1}`),
+  answer: t(`faq.a${i + 1}`),
+}));
+---
+
+<PageLayout
+  title="Česta pitanja"
+  description="Česta pitanja o psihoterapiji: lokacija, cene, trajanje seansi, online terapija i sve što vas zanima."
+  lang={lang}
+  alternateUrls={{ sr: "/sr/faq/", en: "/en/faq/" }}
+  schema={[
+    faqSchema(faqItems),
+    breadcrumbSchema([
+      { name: "Početna", url: `${SITE.url}/sr/` },
+      { name: "Česta pitanja", url: `${SITE.url}/sr/faq/` },
+    ]),
+  ]}
+>
+  <div class="py-6">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Breadcrumbs lang={lang} items={[{ label: "Česta pitanja" }]} />
+    </div>
+  </div>
+  <FAQSection lang={lang} />
+</PageLayout>

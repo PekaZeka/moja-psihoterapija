@@ -1,0 +1,29 @@
+---
+import { useTranslations } from "@/i18n/utils";
+import type { Lang } from "@/i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="py-16 lg:py-24 bg-surface-300">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-heading text-h2 lg:text-h1 text-primary-900 text-center mb-10">
+      {t("howTherapy.title")}
+    </h2>
+
+    <div class="space-y-6 text-lg text-text-secondary leading-relaxed">
+      <p>{t("howTherapy.approach")}</p>
+      <p>{t("howTherapy.noJudgment")}</p>
+      <p>{t("howTherapy.sessions")}</p>
+      <p>{t("howTherapy.preparation")}</p>
+      <p>{t("howTherapy.betweenSessions")}</p>
+      <p>{t("howTherapy.onlineWork")}</p>
+      <p>{t("howTherapy.officeWork")}</p>
+    </div>
+  </div>
+</section>

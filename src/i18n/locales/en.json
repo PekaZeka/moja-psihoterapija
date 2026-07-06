@@ -1,0 +1,145 @@
+{
+  "nav": {
+    "home": "Home",
+    "areas": "Areas of Work",
+    "therapist": "Your Therapist",
+    "blog": "Blog",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "offers": "Special Offers"
+  },
+  "hero": {
+    "slogan": "Moja psihoterapija - Safe place for your recovery and growth",
+    "cta": "Book a free consultation",
+    "therapist":"Miroslav Jovanović - systemic psychotherapist"
+  },
+  "intro": {
+    "text": "With deep empathy, understanding, and dedication, through my alliance with clients, I help them develop their strengths, resilience, and ability to cope with everyday challenges — to feel safe, valued, and create a life on their own terms.",
+    "text2": "I approach each client individually, tailoring my work to their needs and goals. Whether you want to achieve professional success, learn to set boundaries, stand up for yourself, reconnect with your partner, improve parenting skills, overcome life's losses, or restore your self-esteem and self-confidence — you set the goal we work on together.",
+    "location": "I offer psychotherapy in central Belgrade, in person and online, with clients from around the world."
+  },
+  "modes": {
+    "title": "Psychotherapy in-person or online",
+    "online": "Online",
+    "office": "In-Office",
+    "onlineDesc": "Viber, WhatsApp, Zoom, Google Meet",
+    "officeDesc": "Belgrade, Vracar — a comfortable space with coffee or tea"
+  },
+  "whatHappens": {
+    "title": "What happens when you call us?",
+    "step1": "A psychotherapist will answer and listen to you",
+    "step2": "We'll schedule a free consultation",
+    "step3": "We'll make an initial assessment and treatment plan",
+    "step4": "If you decide to proceed, we begin psychotherapy",
+    "callUs": "Call us",
+    "writeUs": "Write to us"
+  },
+  "howTherapy": {
+    "title": "What does psychotherapy look like?",
+    "approach": "In my work, I use a modern systemic approach based on well-established scientific knowledge, focused on the client and tailored to their individual needs.",
+    "noJudgment": "I approach every client without judgment or imposing my own values, while maintaining the highest level of professionalism and confidentiality.",
+    "sessions": "Sessions are usually scheduled once a week and last 50 minutes. We work in cycles of 4 sessions, at the end of which we evaluate the results that have been achieved.",
+    "preparation": "I prepare carefully for each session and closely follow your development, while also consulting with experienced and respected supervisors.",
+    "betweenSessions": "Between sessions, the client receives topics for reflection or small tasks from me, intended to safely and gradually move them out of their comfort zone and encourage personal growth with my support.",
+    "onlineWork": "Online work follows the same principles, and I use different apps such as Viber, WhatsApp, Zoom, Google Meet, and others. It is important that no other people are present in the room besides the client (or multiple clients, in the case of family therapy), that privacy is ensured, and that the camera is turned on so that we can maintain visual contact.",
+    "officeWork": "In-person sessions take place in a specially adapted space in the center of Belgrade, where you can settle in comfortably and, with a cup of tea or coffee, dedicate time to yourself. This setting gives you time and space just for you, so that in a safe atmosphere you can explore yourself and your relationships with other people, while receiving support and encouragement for change."
+  },
+  "topics": {
+    "title": "Topics we work on most often",
+    "anxiety": "Anxiety",
+    "depression": "Sadness & Depression",
+    "confidence": "Self-Confidence",
+    "relationships": "Partner & Family Relationships",
+    "professional": "Professional Achievements",
+    "viewAll": "View all areas of work"
+  },
+  "testimonials": {
+    "title": "Client experiences",
+    "dragana": "Here I found understanding and support that helped me realize how much I'm truly capable of — much more than I thought, and more than others believed.",
+    "tanja": "When I looked in the mirror after a month of therapy, for the first time in a long time, I didn't feel contempt — I felt understanding. A few months later, I started enjoying my reflection and respecting myself.",
+    "stasa": "I love the feeling of safety I have when I walk into this practice.",
+    "bogdan": "What matters to me is that the therapy didn't drag on endlessly — we focused on the specific problems I presented."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "Where are you located?",
+    "a1": "Psychotherapy takes place in a specially adapted, comfortable space in Belgrade, in the Vracar neighborhood. For those who prefer it, online sessions can also be arranged.",
+    "q2": "How does online psychotherapy work?",
+    "a2": "All principles of my work remain the same whether you come to the office or work online. I communicate via Viber, WhatsApp, Zoom, or Google Meet. It's important to have your camera on and be in a private space.",
+    "q3": "How long is a session?",
+    "a3": "An individual session lasts 50 minutes, and couples sessions last 60 minutes.",
+    "q4": "What is the price?",
+    "a4": "Before starting psychotherapy, we offer free consultations. A package of 4 sessions costs between 18,000 and 25,000 dinars, depending on whether the client is an individual, couple, or family.",
+    "q5": "How do I choose a therapist?",
+    "a5": "Don't choose a psychotherapist based on who is geographically closest to you, but based on their experience, sensibility, and the approach they use. The systemic approach I use views a person in the context of their environment. We don't focus heavily on analyzing the subconscious, but primarily on relationships and connections with other important people. Whether I am a good fit for you, you'll know best after meeting me — which is why I offer the opportunity, before starting psychotherapy, to have a free introductory conversation, and based on that you can make a decision about further collaboration.",
+    "q6": "Do you make diagnoses and prescribe medication?",
+    "a6": "No, that is typically done by psychiatrists. Here you can receive psychotherapy services, which are often successfully combined with psychiatric treatment.",
+    "q7": "How long does psychotherapy last?",
+    "a7": "Typically from a few months to a year. At the end of each 4-session cycle, we evaluate our work and assess progress.",
+    "q8": "What are your working hours?",
+    "a8": "We schedule psychotherapy on both weekdays and weekends, mornings and afternoons."
+  },
+  "cta": {
+    "callUs": "Call us",
+    "contactUs": "Contact us",
+    "bookConsultation": "Book a free consultation",
+    "learnMore": "Learn more",
+    "readMore": "Read more",
+    "viewAllAreas": "View all areas",
+    "otherAreas": "Other areas we work on"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch and book a free consultation",
+    "name": "Your name",
+    "phone": "Phone",
+    "email": "Email (optional)",
+    "method": "How would you like us to contact you?",
+    "methodPhone": "Phone call",
+    "methodWhatsApp": "WhatsApp",
+    "methodViber": "Viber",
+    "methodEmail": "Email",
+    "message": "Message (optional)",
+    "preferredTime": "Preferred callback time (optional)",
+    "send": "Send message",
+    "sending": "Sending...",
+    "success": "Message sent successfully! We'll get back to you soon.",
+    "error": "An error occurred. Please try again or call us directly."
+  },
+  "footer": {
+    "tagline": "A safe place for your recovery and growth",
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy"
+  },
+  "blog": {
+    "title": "Blog",
+    "readTime": "min read",
+    "publishedOn": "Published"
+  },
+  "offers": {
+    "title": "Special Offers",
+    "corporate": {
+      "title": "Corporate Packages",
+      "desc": "Special psychotherapy counseling packages for your employees at discounted rates."
+    },
+    "gift": {
+      "title": "Gift a package of 4 sessions",
+      "desc": "Instead of things, give the gift of time, attention, and space for personal growth and support."
+    }
+  },
+  "areas": {
+    "title": "Areas of Work",
+    "contactCta": "Contact us for a free consultation",
+    "otherAreas": "Other areas we work on"
+  },
+  "therapist": {
+    "title": "Your Therapist",
+    "name": "Miroslav Jovanovic",
+    "role": "Systemic Psychotherapist"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "text": "The page you're looking for doesn't exist.",
+    "backHome": "Back to home"
+  }
+}

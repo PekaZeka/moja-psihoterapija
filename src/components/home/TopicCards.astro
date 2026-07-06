@@ -1,0 +1,104 @@
+---
+import { Image } from "astro:assets";
+import { useTranslations } from "@/i18n/utils";
+import type { Lang } from "@/i18n/utils";
+
+import anksioznostImg from "@/assets/topics/anksioznost.png";
+import tugaImg from "@/assets/topics/tuga-depresija.png";
+import samopouzdanjeImg from "@/assets/topics/samopouzdanje.png";
+import partnerImg from "@/assets/topics/partnerski-porodicni-odnosi.png";
+import profesionalnaImg from "@/assets/topics/profesionalna-postignuca.png";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const topics = [
+  {
+    key: "anxiety",
+    label: t("topics.anxiety"),
+    href: lang === "sr" ? "/sr/oblasti-rada/anksioznost/" : "/en/areas-of-work/anxiety/",
+    image: anksioznostImg,
+  },
+  {
+    key: "depression",
+    label: t("topics.depression"),
+    href: lang === "sr" ? "/sr/oblasti-rada/tuga-depresija/" : "/en/areas-of-work/sadness-depression/",
+    image: tugaImg,
+  },
+  {
+    key: "confidence",
+    label: t("topics.confidence"),
+    href: lang === "sr" ? "/sr/oblasti-rada/samopouzdanje/" : "/en/areas-of-work/self-confidence/",
+    image: samopouzdanjeImg,
+  },
+  {
+    key: "relationships",
+    label: t("topics.relationships"),
+    href: lang === "sr" ? "/sr/oblasti-rada/partnerski-odnosi/" : "/en/areas-of-work/partner-relationships/",
+    image: partnerImg,
+  },
+  {
+    key: "professional",
+    label: t("topics.professional"),
+    href: lang === "sr" ? "/sr/oblasti-rada/produktivnost/" : "/en/areas-of-work/productivity/",
+    image: profesionalnaImg,
+  },
+];
+---
+
+<section class="py-16 lg:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="font-heading text-h2 lg:text-h1 text-primary-900 text-center mb-12">
+      {t("topics.title")}
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {topics.map((topic) => (
+        <a
+          href={topic.href}
+          class="group block rounded-2xl border border-surface-300 bg-white hover:shadow-xl hover:border-primary-300 transition-all duration-300 overflow-hidden"
+          data-event="area_click"
+        >
+          <div class="flex justify-center items-center bg-[#fcf6f2] min-h-[10rem]">
+            <Image
+              src={topic.image}
+              alt=""
+              class="max-h-44 w-auto object-contain group-hover:scale-105 transition-transform duration-500"
+              width={400}
+              loading="lazy"
+            />
+          </div>
+
+          <div class="p-6">
+            <h3 class="font-heading text-h4 text-primary-900 group-hover:text-primary-700 transition-colors">
+              {topic.label}
+            </h3>
+
+            <span class="text-sm text-primary-600 font-medium mt-2 inline-flex items-center gap-1">
+              {t("cta.learnMore")}
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="text-center mt-10">
+      <a
+        href={lang === "sr" ? "/sr/oblasti-rada/" : "/en/areas-of-work/"}
+        class="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary-600 text-primary-600 font-medium rounded-xl hover:bg-primary-600 hover:text-white transition-all"
+      >
+        {t("topics.viewAll")}
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,43 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import HeroSection from "@/components/home/HeroSection.astro";
+import IntroSection from "@/components/home/IntroSection.astro";
+import TherapyModes from "@/components/home/TherapyModes.astro";
+import VideoSection from "@/components/home/VideoSection.astro";
+import WhatHappensSection from "@/components/home/WhatHappensSection.astro";
+import HowTherapyWorks from "@/components/home/HowTherapyWorks.astro";
+import TopicCards from "@/components/home/TopicCards.astro";
+import TestimonialsSection from "@/components/home/TestimonialsSection.astro";
+import FAQSection from "@/components/home/FAQSection.astro";
+import { localBusinessSchema } from "@/lib/schema";
+import { faqSchema } from "@/lib/schema";
+
+const lang = "en";
+---
+
+<PageLayout
+  title="Psychotherapy Belgrade"
+  description="Moja psihoterapija — a center for personal, family, and professional growth in Belgrade. Systemic psychotherapy, individual therapy, online and in-person. Free consultations."
+  lang={lang}
+  alternateUrls={{ sr: "/sr/", en: "/en/" }}
+  schema={[
+    localBusinessSchema(lang),
+    faqSchema([
+      { question: "Where are you located?", answer: "We provide psychotherapy services in Belgrade, in the Vracar neighborhood. We also offer online sessions." },
+      { question: "How long is a session?", answer: "An individual session lasts 50 minutes, and couples sessions last 60 minutes." },
+      { question: "What is the price?", answer: "A package of 4 sessions costs between 18,000 and 25,000 dinars." },
+      { question: "How does online psychotherapy work?", answer: "For communication we use Viber, WhatsApp, Zoom, and Google Meet. All principles of work remain the same." },
+      { question: "How long does psychotherapy last?", answer: "Typically from a few months to a year." },
+    ]),
+  ]}
+>
+  <HeroSection lang={lang} />
+  <VideoSection lang={lang} />
+  <TherapyModes lang={lang} />
+  <IntroSection lang={lang} />
+  <WhatHappensSection lang={lang} />
+  <HowTherapyWorks lang={lang} />
+  <TopicCards lang={lang} />
+  <TestimonialsSection lang={lang} />
+  <FAQSection lang={lang} />
+</PageLayout>

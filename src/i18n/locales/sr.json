@@ -1,0 +1,145 @@
+{
+  "nav": {
+    "home": "Početna",
+    "areas": "Oblasti rada",
+    "therapist": "Vaš terapeut",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "faq": "Česta pitanja",
+    "offers": "Specijalne ponude"
+  },
+  "hero": {
+    "slogan": "Moja psihoterapija - Sigurno mesto za vaš oporavak i razvoj",
+    "cta": "Zakažite besplatne konsultacije",
+    "therapist":"Miroslav Jovanović - sistemski psihoterapeut"
+  },
+  "intro": {
+    "text": "Uz mnogo empatije, razumevanja i posvećenosti, kroz savez sa klijentima pomažem im da razvijaju svoje snage, otpornost i sposobnost da se nose sa svakodnevnim izazovima, da se osećaju sigurno i vredno i urede život po svojoj meri.",
+    "text2": "Svakom klijentu pristupam individualno i rad prilagođavam njegovim potrebama i zahtevima. Bilo da želite da ostvarite profesionalni uspeh, naučite kako da postavljate granice, zauzmete se za sebe, ponovo se povežete sa svojim partnerom, unapredite roditeljske kompetencije, prevaziđete životne gubitke, povratite samopoštovanje i samouverenost — vi određujete cilj na kome ćemo zajedno raditi.",
+    "location": "Psihoterapija u kancelarijama u centru Beograda i online, sa klijentima iz celog sveta."
+  },
+  "modes": {
+    "title": "Psihoterapija u kancelariji ili online",
+    "online": "Online",
+    "office": "U kancelariji",
+    "onlineDesc": "Viber, WhatsApp, Zoom, Google Meet",
+    "officeDesc": "Beograd, Vračar — udoban prostor uz kafu ili čaj"
+  },
+  "whatHappens": {
+    "title": "Šta će se dogoditi kada pozovete?",
+    "step1": "Javiće Vam se psihoterapeut koji će vas saslušati",
+    "step2": "Zakazaćemo besplatan konsultativni razgovor",
+    "step3": "Napravićemo prvu procenu i predlog za dalji rad",
+    "step4": "Ako se odlučite za saradnju, počinjemo sa psihoterapijom",
+    "callUs": "Pozovite nas",
+    "writeUs": "Pišite nam"
+  },
+  "howTherapy": {
+    "title": "Kako izgleda psihoterapija?",
+    "approach": "U radu koristim savremeni, sistemski pristup, baziran na proverenim naučnim saznanjima, fokusiran na klijenta i prilagođen njegovim individualnim potrebama.",
+    "noJudgment": "Svakom klijentu pristupam bez osuđivanja i nametanja svojih vrednosnih stavova, uz najviši nivo profesionalizma i poverljivosti.",
+    "sessions": "Seanse obično zakazujemo jednom nedeljno i one traju 50 minuta. Radimo u ciklusima od 4 seanse, na kraju kojih evaluiramo postignute rezultate.",
+    "preparation": "Posebno se pripremam za svaku seansu i pažljivo pratim vaš razvoj, a u svom radu se konsultujem sa iskusnim i priznatim supervizorima.",
+    "betweenSessions": "Između seansi klijent od mene dobija teme za razmišljanje ili male zadatke koji imaju za cilj da ga bezbedno i planski izmeste iz zone komfora i podstaknu njegov lični rast uz podršku terapeuta.",
+    "onlineWork": "Online rad se odvija po istim principima, a koristim različite aplikacije, kao što su Viber, WhatsApp, Zoom, Google Meet i druge. Važno je da u prostoriji pored klijenta (ili više klijenata ukoliko se radi o porodičnoj terapiji) ne bude drugih osoba, da postoji privatnost i da se koristi kamera, kako bismo mogli da imamo vizuelni kontakt.",
+    "officeWork": "Rad u kancelariji se obavlja u posebno prilagođenom prostoru, u centru Beograda, gde možete udobno da se smestite i uz šolju čaja ili kafe posvetite se sebi. Ovo podrazumeva da imate vreme i prostor samo za vas i da u sigurnoj atmosferi možete da istražite sebe i svoje odnose sa drugim ljudima i da dobijete podršku i podsticaj za promenu."
+  },
+  "topics": {
+    "title": "Teme na kojima najčešće radimo",
+    "anxiety": "Anksioznost",
+    "depression": "Tuga i depresija",
+    "confidence": "Samopouzdanje",
+    "relationships": "Partnerski i porodični odnosi",
+    "professional": "Profesionalna postignuća",
+    "viewAll": "Pogledajte sve oblasti rada"
+  },
+  "testimonials": {
+    "title": "Iskustva klijenata",
+    "dragana": "Ovde sam naišla na razumevanje i podršku uz koju sam shvatila koliko zaista mogu — a mogu mnogo više nego što sam mislila i što su drugi mislili.",
+    "tanja": "Kada sam se nakon mesec dana terapija pogledala u ogledalo, prvi put, posle mnogo vremena nisam osetila prezir, već razumevanje. Posle još par meseci, počela sam da se ogledam sa uživanjem i da poštujem sebe.",
+    "stasa": "Volim osećaj sigurnosti koji imam kada ulazim u ovo savetovalište.",
+    "bogdan": "Važno mi je što se terapija nije otezala u nedogled već smo se fokusirali na konkretne probleme koje sam izložio."
+  },
+  "faq": {
+    "title": "Česta pitanja",
+    "q1": "Gde se nalazite?",
+    "a1": "Psihoterapija se odvija u posebno prilagođenom, udobnom prostoru, koji se nalazi u Beogradu, na Vračaru. Za one kojima to više odgovara, možemo organizovati i online seanse.",
+    "q2": "Kako funkcioniše online psihoterapija?",
+    "a2": "Svi principi rada su isti bez obzira da li dolazite u kancelariju ili radimo online. Za komunikaciju koristimo Viber, WhatsApp, Zoom, Google Meet. Važno je da su uključene kamere i da u prostoriji nema drugih osoba.",
+    "q3": "Koliko traje seansa?",
+    "a3": "Jedna seansa traje 50 minuta za pojedinca i 60 minuta za parove.",
+    "q4": "Koja je cena?",
+    "a4": "Pre psihoterapije nudimo besplatne konsultacije. Cena paketa od 4 termina iznosi od 18.000 do 25.000 dinara, zavisno od toga da li je klijent pojedinac, par ili porodica.",
+    "q5": "Kako da izaberem terapeuta?",
+    "a5": "Psihoterapeuta nemojte birati po tome koji vam je najbliži, već po iskustvu, senzibilitetu i pristupu koji koristi. Sistemski pristup koji ja koristim posmatra osobu u kontekstu njegovog okruženja. Ne bavimo se previse analizom podsvesti, već pre svega relacijama i odnosima sa drugim važnim osobama. Da li vam terapeut odgovara, najbolje ćete znati kada ga budete upoznali, zato ovde imate mogućnost da pre psihoterapije obavite obavite besplatan razgovor upoznavanja sa terapeutom i na osnovu njega donesete odluku o daljoj saradnji.",
+    "q6": "Da li postavljate dijagnozu i prepisujete terapiju?",
+    "a6": "Ne, to obično rade psihijatri. Ovde možete dobiti psihoterapeutske usluge, koje se često uspešno kombinuju sa psihijatrijskom terapijom.",
+    "q7": "Koliko traje psihoterapija?",
+    "a7": "Najčešće od par meseci do godinu dana. Na kraju svakog ciklusa od 4 seanse evaluiramo rad i procenjujemo napredak.",
+    "q8": "Koje je vaše radno vreme?",
+    "a8": "Psihoterapiju zakazujemo i vikendom i radnim danima, pre i posle podne."
+  },
+  "cta": {
+    "callUs": "Pozovite nas",
+    "contactUs": "Kontaktirajte nas",
+    "bookConsultation": "Zakažite besplatne konsultacije",
+    "learnMore": "Saznajte više",
+    "readMore": "Pročitajte više",
+    "viewAllAreas": "Pogledajte sve oblasti",
+    "otherAreas": "Ostale oblasti na kojima radimo"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Javite se i zakažite besplatne konsultacije",
+    "name": "Vaše ime",
+    "phone": "Telefon",
+    "email": "E-mail (opciono)",
+    "method": "Kako želite da vas kontaktiramo?",
+    "methodPhone": "Telefonom",
+    "methodWhatsApp": "WhatsApp",
+    "methodViber": "Viber",
+    "methodEmail": "E-mail",
+    "message": "Poruka (opciono)",
+    "preferredTime": "Željeno vreme za poziv (opciono)",
+    "send": "Pošaljite poruku",
+    "sending": "Šaljem...",
+    "success": "Poruka je uspešno poslata! Javićemo vam se uskoro.",
+    "error": "Došlo je do greške. Molimo pokušajte ponovo ili nas pozovite direktno."
+  },
+  "footer": {
+    "tagline": "Sigurno mesto za vaš oporavak i razvoj",
+    "rights": "Sva prava zadržana",
+    "privacy": "Politika privatnosti"
+  },
+  "blog": {
+    "title": "Blog",
+    "readTime": "min čitanja",
+    "publishedOn": "Objavljeno"
+  },
+  "offers": {
+    "title": "Specijalne ponude",
+    "corporate": {
+      "title": "Ponuda za kompanije",
+      "desc": "Posebno povoljni paketi psihoterapijskog savetovanja za vaše zaposlene."
+    },
+    "gift": {
+      "title": "Poklonite nekome paket od 4 seanse",
+      "desc": "Umesto stvari, možete pokloniti vreme, pažnju i prostor za lični rast i podršku."
+    }
+  },
+  "areas": {
+    "title": "Oblasti rada",
+    "contactCta": "Javite nam se za besplatne konsultacije",
+    "otherAreas": "Ostale oblasti na kojima radimo"
+  },
+  "therapist": {
+    "title": "Vaš terapeut",
+    "name": "Miroslav Jovanović",
+    "role": "Sistemski psihoterapeut"
+  },
+  "notFound": {
+    "title": "Stranica nije pronađena",
+    "text": "Stranica koju tražite ne postoji.",
+    "backHome": "Nazad na početnu"
+  }
+}

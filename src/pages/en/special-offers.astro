@@ -1,0 +1,82 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import Breadcrumbs from "@/components/common/Breadcrumbs.astro";
+import { useTranslations } from "@/i18n/utils";
+
+const lang = "en";
+const t = useTranslations(lang);
+---
+
+<PageLayout
+  title="Special Offers"
+  description="Special psychotherapy packages for companies and gift packages. Discounted rates for group bookings."
+  lang={lang}
+  alternateUrls={{ sr: "/sr/specijalne-ponude/", en: "/en/special-offers/" }}
+>
+  <section class="py-12 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <Breadcrumbs lang={lang} items={[{ label: "Special Offers" }]} />
+      </div>
+
+      <h1 class="font-heading text-h1 lg:text-display text-primary-900 mb-12">
+        {t("offers.title")}
+      </h1>
+
+      <div class="space-y-8">
+        <!-- Corporate packages -->
+        <div class="p-8 bg-gradient-to-br from-primary-50 to-surface-200 rounded-2xl border border-primary-200/50">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="font-heading text-h3 text-primary-900">{t("offers.corporate.title")}</h2>
+            </div>
+          </div>
+          <div class="space-y-4 text-text-secondary leading-relaxed">
+            <p>
+              One way employers try to attract and retain employees is by providing different free-of-charge benefits. Mental health is no less important than physical health, and one great benefit you can offer your employees is psychotherapy counseling.
+            </p>
+            <p>
+              Sessions take place on a schedule that works for your employees. Although the company covers the cost, our clients are the employees themselves — and full confidentiality is guaranteed.
+            </p>
+            <p class="font-medium text-primary-800">
+              For companies, we offer specially discounted packages with additional reductions for larger numbers of sessions.
+            </p>
+          </div>
+          <a href="/en/contact/" class="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-primary-600 text-white rounded-xl hover:bg-primary-700 transition-colors font-medium">
+            Contact us for a quote
+          </a>
+        </div>
+
+        <!-- Gift packages -->
+        <div class="p-8 bg-gradient-to-br from-accent-50 to-surface-200 rounded-2xl border border-accent-200/50">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="font-heading text-h3 text-primary-900">{t("offers.gift.title")}</h2>
+            </div>
+          </div>
+          <div class="space-y-4 text-text-secondary leading-relaxed">
+            <p>
+              A package of 4 sessions can be a special gift for someone you truly care about. Instead of things, you can give the gift of time, attention, and space for personal growth and support. It's a gift that can have deep and lasting meaning.
+            </p>
+            <p>
+              Of course, it's essential that the person wants to attend psychotherapy — change isn't possible without the client's willingness.
+            </p>
+          </div>
+          <a href="/en/contact/" class="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-accent-600 text-white rounded-xl hover:bg-accent-700 transition-colors font-medium">
+            Give a package
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>

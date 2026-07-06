@@ -1,0 +1,232 @@
+---
+import { Image } from "astro:assets";
+import PageLayout from "@/layouts/PageLayout.astro";
+import Breadcrumbs from "@/components/common/Breadcrumbs.astro";
+import { SITE } from "@/lib/constants";
+import { personSchema, breadcrumbSchema } from "@/lib/schema";
+import foto2 from "@/assets/photos/foto-2.jpg";
+import foto3 from "@/assets/photos/foto-3.jpg";
+import miroslav1 from "@/assets/photos/miroslav-1.jpg";
+import miroslav2 from "@/assets/photos/miroslav-2.jpg";
+import miroslav3 from "@/assets/photos/miroslav-3.jpg";
+import testimonijal1 from "@/assets/photos/testimonijal-1.jpg";
+import testimonijal2 from "@/assets/photos/testimonijal-2.jpg";
+import gostovanje1 from "@/assets/media/gostovanje1.png";
+import gostovanje2 from "@/assets/media/gostovanje2.png";
+import gostovanje3 from "@/assets/media/gostovanje3.png";
+import gostovanje4 from "@/assets/media/gostovanje4.png";
+
+const lang = "en";
+
+const galleryImages = [
+  { src: foto2,         alt: "Miroslav Jovanović during a professional training" },
+  { src: miroslav1,     alt: "Workshop led by Miroslav Jovanović" },
+  { src: miroslav2,     alt: "Miroslav Jovanović speaking at a professional event" },
+  { src: miroslav3,     alt: "Miroslav Jovanović presenting at a seminar" },
+  { src: testimonijal1, alt: "Miroslav Jovanović with participants" },
+  { src: testimonijal2, alt: "Professional gathering" },
+  { src: gostovanje1,   alt: "Miroslav Jovanović — media appearance" },
+  { src: gostovanje2,   alt: "Miroslav Jovanović — media appearance" },
+  { src: gostovanje3,   alt: "Miroslav Jovanović — media appearance" },
+  { src: gostovanje4,   alt: "Miroslav Jovanović — media appearance" },
+];
+---
+
+<PageLayout
+  title="Your Therapist — Miroslav Jovanovic"
+  description="Miroslav Jovanovic, systemic psychotherapist. Years of experience working with complex traumatic experiences. Psychotherapy in Belgrade and online."
+  lang={lang}
+  alternateUrls={{ sr: "/sr/vas-terapeut/", en: "/en/your-therapist/" }}
+  schema={[
+    personSchema(),
+    breadcrumbSchema([
+      { name: "Home", url: `${SITE.url}/en/` },
+      { name: "Your Therapist", url: `${SITE.url}/en/your-therapist/` },
+    ]),
+  ]}
+>
+  <section class="py-12 lg:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <Breadcrumbs lang={lang} items={[{ label: "Your Therapist" }]} />
+      </div>
+
+      <!-- Hero -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-16 items-start">
+        <div class="lg:col-span-1">
+          <div class="relative w-full rounded-[1.5rem] overflow-hidden shadow-xl">
+            <Image
+              src={foto3}
+              alt="Miroslav Jovanović, systemic psychotherapist"
+              class="w-full h-full object-cover object-top"
+              width={800}
+              fetchpriority="high"
+            />
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h1 class="font-heading text-h1 lg:text-display text-primary-900 mb-2">
+            Miroslav Jovanović
+          </h1>
+          <p class="text-lg text-accent-600 font-medium mb-6">Systemic Psychotherapist</p>
+
+          <div class="space-y-5 text-text-secondary leading-relaxed text-lg">
+            <p>
+              I'm Miroslav Jovanović, a systemic psychotherapist. I earned my education at the Faculty of Political Sciences, University of Belgrade, where I completed both bachelor's and master's studies in social work, and then trained in psychotherapy at the European-accredited institute of the Association of Systemic Therapists.
+            </p>
+            <p>
+              I've shaped my professional identity over years of working with people who have survived complex traumatic experiences. Since 2021, I've been head of the Service for the Coordination of Protection of Victims of Human Trafficking, where I've encountered the most complex professional challenges, worked in crisis situations, and developed systemic models of support for people in the most critical life periods.
+            </p>
+            <p>
+              I've led various projects in this field, designed and delivered trainings on communication, interviewing, and support for vulnerable groups — for psychologists, police, prosecutors, judges, social workers, and educators. I've organized numerous international and domestic professional gatherings.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional Work Section -->
+      <div class="relative mb-16 rounded-[2rem] border border-surface-200/80 bg-gradient-to-br from-surface-50 via-white to-surface-100 p-6 sm:p-8 lg:p-10 overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-primary-100/40 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-56 h-56 bg-accent-100/40 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
+
+        <div class="relative flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-8">
+          <div>
+            <p class="text-sm uppercase tracking-[0.2em] text-accent-600 font-medium mb-2">
+              Professional Work
+            </p>
+            <h2 class="font-heading text-h2 text-primary-900">
+              Seminars, trainings, and workshops
+            </h2>
+          </div>
+          <p class="text-text-secondary max-w-2xl leading-relaxed">
+            A glimpse into Miroslav's work through seminars, professional trainings, educational events, and workshops.
+          </p>
+        </div>
+
+        <!-- YouTube video -->
+        <div class="relative mb-6 rounded-[1.5rem] overflow-hidden shadow-lg aspect-video">
+          <iframe
+            src="https://www.youtube.com/embed/9q9Q0aol3yM"
+            title="Miroslav Jovanović — video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            class="w-full h-full"
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <!-- Photo grid -->
+        <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5">
+
+          <!-- Large featured -->
+          <figure class="group relative lg:col-span-7 lg:row-span-2 rounded-[1.75rem] overflow-hidden shadow-lg bg-surface-200 min-h-[280px] lg:min-h-[400px]">
+            <Image
+              src={galleryImages[0].src}
+              alt={galleryImages[0].alt}
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              width={1200}
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-950/40 to-transparent"></div>
+          </figure>
+
+          <!-- Side top -->
+          <figure class="group relative lg:col-span-5 rounded-[1.5rem] overflow-hidden shadow-md bg-surface-200 min-h-[200px] lg:min-h-[190px]">
+            <Image
+              src={galleryImages[1].src}
+              alt={galleryImages[1].alt}
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              width={800}
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-950/40 to-transparent"></div>
+          </figure>
+
+          <!-- Side bottom -->
+          <figure class="group relative lg:col-span-5 rounded-[1.5rem] overflow-hidden shadow-md bg-surface-200 min-h-[200px] lg:min-h-[190px]">
+            <Image
+              src={galleryImages[2].src}
+              alt={galleryImages[2].alt}
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              width={800}
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-950/40 to-transparent"></div>
+          </figure>
+
+          <!-- Row 2: 3 images -->
+          {galleryImages.slice(3, 6).map((image) => (
+            <figure class="group relative lg:col-span-4 rounded-[1.5rem] overflow-hidden shadow-md bg-surface-200 min-h-[180px]">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                width={700}
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-primary-950/40 to-transparent"></div>
+            </figure>
+          ))}
+
+          <!-- Row 3: 4 images (media appearances) -->
+          {galleryImages.slice(6).map((image) => (
+            <figure class="group relative lg:col-span-3 rounded-[1.5rem] overflow-hidden shadow-md bg-surface-200 min-h-[160px]">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                width={600}
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-primary-950/40 to-transparent"></div>
+            </figure>
+          ))}
+
+        </div>
+      </div>
+
+      <!-- Approach -->
+      <div class="space-y-5 text-text-secondary leading-relaxed text-lg mb-12">
+        <p>
+          In therapy I most often work with topics of self-confidence, self-image, anxiety, family and partner relationships. I help clients become aware of their strengths, set boundaries, and start standing up for themselves — to strengthen their parenting capacities, reconnect with their partner, and learn to communicate better.
+        </p>
+        <p>
+          I think my biggest strengths in this work are empathy and a naturally non-judgmental approach — but you'll be the best judge of that once we get to know each other.
+        </p>
+        <p>
+          You won't experience judgment or cold criticism from me. I usually build trust easily with clients and strive to help them feel comfortable and safe during sessions — not to indulge them, but because I know how much courage it takes to question oneself and make a change, and I have great respect for people who commit to that journey.
+        </p>
+        <p>
+          I'm not one of those therapists who just listens, nods, and asks, "And how do you feel about that?" I try to actively participate in the session and give my clients as much as I can. I aim to encourage them to take the step and make the change they want — but at a pace that suits them.
+        </p>
+        <p>
+          I try to stay aware of my own limitations and shortcomings, and I don't take on topics where I don't have the competence. Feedback from you matters to me, and I always want to hear what my clients think about the process we're in together.
+        </p>
+        <p class="italic text-primary-800">
+          Sometimes all that's needed is a shift in perspective — seeing your situation from a different angle to set a big change in motion. I invite you to reach out so we can look at your situation through a slightly different lens.
+        </p>
+      </div>
+
+      <!-- Team note -->
+      <div class="p-6 bg-surface-300 rounded-2xl">
+        <p class="text-text-secondary leading-relaxed">
+          I also work alongside other young, empathetic, and dedicated therapists, whom I can recommend based on your needs and the areas you'd like to work on.
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-12 text-center">
+        <a
+          href="/en/contact/"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 text-white font-medium rounded-xl shadow-lg hover:bg-primary-700 transition-all text-lg"
+        >
+          Book a free consultation
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</PageLayout>

@@ -1,0 +1,15 @@
+---
+const gtmId = import.meta.env.GTM_ID || "GTM-XXXXXXX";
+const isPlaceholder = gtmId === "GTM-XXXXXXX";
+---
+
+{!isPlaceholder && (
+  <noscript>
+    <iframe
+      src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden"
+    ></iframe>
+  </noscript>
+)}

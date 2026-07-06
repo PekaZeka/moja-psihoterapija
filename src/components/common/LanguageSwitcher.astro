@@ -1,0 +1,52 @@
+---
+import type { Lang } from "@/i18n/utils";
+import { getAlternateLang, languages, areaSlugMap } from "@/i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const altLang = getAlternateLang(lang);
+const altLabel = languages[altLang];
+
+// Build the alternate URL
+let altPath = Astro.url.pathname;
+
+// Replace language prefix
+altPath = altPath.replace(`/${lang}/`, `/${altLang}/`);
+
+// Replace known path segments
+if (lang === "sr") {
+  altPath = altPath
+    .replace("/oblasti-rada/", "/areas-of-work/")
+    .replace("/vas-terapeut/", "/your-therapist/")
+    .replace("/kontakt/", "/contact/")
+    .replace("/specijalne-ponude/", "/special-offers/");
+} else {
+  altPath = altPath
+    .replace("/areas-of-work/", "/oblasti-rada/")
+    .replace("/your-therapist/", "/vas-terapeut/")
+    .replace("/contact/", "/kontakt/")
+    .replace("/special-offers/", "/specijalne-ponude/");
+}
+
+// Replace area slugs (match full path segment to avoid partial replacements)
+for (const [from, to] of Object.entries(areaSlugMap)) {
+  if (altPath.includes(`/${from}/`)) {
+    altPath = altPath.replace(`/${from}/`, `/${to}/`);
+    break;
+  }
+}
+---
+
+<a
+  href={altPath}
+  class="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-text-secondary hover:text-primary-700 rounded-lg hover:bg-primary-50/50 transition-colors"
+  aria-label={`Switch to ${altLabel}`}
+>
+  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+  </svg>
+  <span>{altLabel}</span>
+</a>

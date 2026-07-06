@@ -1,0 +1,82 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import Breadcrumbs from "@/components/common/Breadcrumbs.astro";
+import { useTranslations } from "@/i18n/utils";
+
+const lang = "sr";
+const t = useTranslations(lang);
+---
+
+<PageLayout
+  title="Specijalne ponude"
+  description="Posebni paketi psihoterapije za kompanije i poklon paketi. Povoljne cene za grupne rezervacije."
+  lang={lang}
+  alternateUrls={{ sr: "/sr/specijalne-ponude/", en: "/en/special-offers/" }}
+>
+  <section class="py-12 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <Breadcrumbs lang={lang} items={[{ label: "Specijalne ponude" }]} />
+      </div>
+
+      <h1 class="font-heading text-h1 lg:text-display text-primary-900 mb-12">
+        {t("offers.title")}
+      </h1>
+
+      <div class="space-y-8">
+        <!-- Corporate packages -->
+        <div class="p-8 bg-gradient-to-br from-primary-50 to-surface-200 rounded-2xl border border-primary-200/50">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="font-heading text-h3 text-primary-900">{t("offers.corporate.title")}</h2>
+            </div>
+          </div>
+          <div class="space-y-4 text-text-secondary leading-relaxed">
+            <p>
+              Jedan od načina na koji poslodavci nastoje da privuku zaposlene je obezbeđivanje različitih besplatnih aktivnosti. Mentalno zdravlje zaposlenih je ništa manje važno od fizičkog i jedna od sjajnih pogodnosti koje možete da ponudite svojim zaposlenima je psihoterapijsko savetovanje.
+            </p>
+            <p>
+              Psihoterapija se odvija u skladu sa dinamikom koja odgovara zaposlenima. Iako kompanija pokriva troškove, naši klijenti su zaposleni i potpuna poverljivost je zagarantovana.
+            </p>
+            <p class="font-medium text-primary-800">
+              Za kompanije nudimo posebno povoljne pakete sa dodatnim popustima na veći broj seansi.
+            </p>
+          </div>
+          <a href="/sr/kontakt/" class="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-primary-600 text-white rounded-xl hover:bg-primary-700 transition-colors font-medium">
+            Kontaktirajte nas za ponudu
+          </a>
+        </div>
+
+        <!-- Gift packages -->
+        <div class="p-8 bg-gradient-to-br from-accent-50 to-surface-200 rounded-2xl border border-accent-200/50">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="font-heading text-h3 text-primary-900">{t("offers.gift.title")}</h2>
+            </div>
+          </div>
+          <div class="space-y-4 text-text-secondary leading-relaxed">
+            <p>
+              Paket od 4 seanse može biti poseban poklon za nekoga do koga vam je zaista stalo. Umesto stvari, možete pokloniti vreme, pažnju i prostor za lični rast i podršku. To je dar koji može imati dubok i trajan značaj.
+            </p>
+            <p>
+              Naravno, esencijalno je važno da ta osoba želi da dolazi na psihoterapiju, jer promena nije moguća bez volje klijenta.
+            </p>
+          </div>
+          <a href="/sr/kontakt/" class="inline-flex items-center gap-2 mt-6 px-6 py-3 bg-accent-600 text-white rounded-xl hover:bg-accent-700 transition-colors font-medium">
+            Poklonite paket
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>

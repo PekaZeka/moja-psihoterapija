@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+import { useTranslations } from "@/i18n/utils";
+import type { Lang } from "@/i18n/utils";
+import heroPhoto from "@/assets/photos/foto-1.jpg";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const contactHref = lang === "sr" ? "/sr/kontakt/" : "/en/contact/";
+---
+
+<section class="relative overflow-hidden bg-gradient-to-br from-surface-50 via-surface-100 to-surface-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Left: Text Content -->
+      <div class="order-2 lg:order-1 text-center lg:text-left">
+        <h1 class="font-heading text-4xl sm:text-5xl lg:text-display text-primary-900 mb-6 leading-tight">
+          {t("hero.slogan")}
+        </h1>
+        <p class="text-lg sm:text-xl text-text-secondary mb-8 max-w-lg mx-auto lg:mx-0">
+          {t("intro.location")}
+        </p>
+        <a
+          href={contactHref}
+          class="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 text-white font-medium rounded-xl shadow-lg shadow-primary-600/25 hover:bg-primary-700 hover:shadow-xl hover:shadow-primary-700/30 transition-all duration-300 text-lg"
+        >
+          {t("hero.cta")}
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Right: Therapist Photo Placeholder -->
+      <div class="order-1 lg:order-2 flex flex-col items-center lg:items-end">
+        <div class="relative w-full h-80 sm:h-96 lg:h-[28rem] rounded-2xl overflow-hidden shadow-2xl">
+          <Image
+            src={heroPhoto}
+            alt="Miroslav Jovanović, sistemski psihoterapeut"
+            class="w-full h-full object-cover object-top"
+            width={800}
+            fetchpriority="high"
+          />
+        </div>
+
+        <p class="w-full mt-4 text-center text-base sm:text-lg text-primary-900 font-medium">
+          {t("hero.therapist")}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background decorative elements -->
+  <div class="absolute top-0 right-0 w-96 h-96 bg-primary-100/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+  <div class="absolute bottom-0 left-0 w-64 h-64 bg-accent-100/30 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+</section>

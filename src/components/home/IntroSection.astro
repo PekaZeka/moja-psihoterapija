@@ -1,0 +1,32 @@
+---
+import { useTranslations } from "@/i18n/utils";
+import type { Lang } from "@/i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-lg sm:text-xl text-text-secondary leading-relaxed mb-6">
+        {t("intro.text")}
+      </p>
+      <p class="text-lg sm:text-xl text-text-secondary leading-relaxed mb-6">
+        {t("intro.text2")}
+      </p>
+      <p class="text-base text-text-muted italic">
+        {t("intro.location")}
+      </p>
+    </div>
+
+    <!-- Subtle divider -->
+    <div class="mt-16 flex justify-center">
+      <div class="w-24 h-1 bg-gradient-to-r from-primary-300 via-accent-300 to-primary-300 rounded-full"></div>
+    </div>
+  </div>
+</section>

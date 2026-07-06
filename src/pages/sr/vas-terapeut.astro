@@ -1,0 +1,232 @@
+---
+import { Image } from "astro:assets";
+import PageLayout from "@/layouts/PageLayout.astro";
+import Breadcrumbs from "@/components/common/Breadcrumbs.astro";
+import { SITE } from "@/lib/constants";
+import { personSchema, breadcrumbSchema } from "@/lib/schema";
+import foto2 from "@/assets/photos/foto-2.jpg";
+import foto3 from "@/assets/photos/foto-3.jpg";
+import miroslav1 from "@/assets/photos/miroslav-1.jpg";
+import miroslav2 from "@/assets/photos/miroslav-2.jpg";
+import miroslav3 from "@/assets/photos/miroslav-3.jpg";
+import testimonijal1 from "@/assets/photos/testimonijal-1.jpg";
+import testimonijal2 from "@/assets/photos/testimonijal-2.jpg";
+import gostovanje1 from "@/assets/media/gostovanje1.png";
+import gostovanje2 from "@/assets/media/gostovanje2.png";
+import gostovanje3 from "@/assets/media/gostovanje3.png";
+import gostovanje4 from "@/assets/media/gostovanje4.png";
+
+const lang = "sr";
+
+const galleryImages = [
+  { src: foto2,         alt: "Miroslav Jovanović tokom stručne obuke" },
+  { src: miroslav1,     alt: "Radionica koju vodi Miroslav Jovanović" },
+  { src: miroslav2,     alt: "Miroslav Jovanović govori na stručnom događaju" },
+  { src: miroslav3,     alt: "Miroslav Jovanović drži predavanje" },
+  { src: testimonijal1, alt: "Miroslav Jovanović sa učesnicima" },
+  { src: testimonijal2, alt: "Stručni susret" },
+  { src: gostovanje1,   alt: "Miroslav Jovanović — medijsko gostovanje" },
+  { src: gostovanje2,   alt: "Miroslav Jovanović — medijsko gostovanje" },
+  { src: gostovanje3,   alt: "Miroslav Jovanović — medijsko gostovanje" },
+  { src: gostovanje4,   alt: "Miroslav Jovanović — medijsko gostovanje" },
+];
+---
+
+<PageLayout
+  title="Vaš terapeut — Miroslav Jovanović"
+  description="Miroslav Jovanović, sistemski psihoterapeut. Višegodišnje iskustvo u radu sa kompleksnim traumatičnim iskustvima. Psihoterapija u Beogradu i online."
+  lang={lang}
+  alternateUrls={{ sr: "/sr/vas-terapeut/", en: "/en/your-therapist/" }}
+  schema={[
+    personSchema(),
+    breadcrumbSchema([
+      { name: "Početna", url: `${SITE.url}/sr/` },
+      { name: "Vaš terapeut", url: `${SITE.url}/sr/vas-terapeut/` },
+    ]),
+  ]}
+>
+  <section class="py-12 lg:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <Breadcrumbs lang={lang} items={[{ label: "Vaš terapeut" }]} />
+      </div>
+
+      <!-- Hero -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-16 items-start">
+        <div class="lg:col-span-1">
+          <div class="relative w-full rounded-[1.5rem] overflow-hidden shadow-xl">
+            <Image
+              src={foto3}
+              alt="Miroslav Jovanović, sistemski psihoterapeut"
+              class="w-full h-full object-cover object-top"
+              width={800}
+              fetchpriority="high"
+            />
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h1 class="font-heading text-h1 lg:text-display text-primary-900 mb-2">
+            Miroslav Jovanović
+          </h1>
+          <p class="text-lg text-accent-600 font-medium mb-6">Sistemski psihoterapeut</p>
+
+          <div class="space-y-5 text-text-secondary leading-relaxed text-lg">
+            <p>
+              Ja sam Miroslav Jovanović, sistemski psihoterapeut. Obrazovanje sam stekao na Fakultetu političkih nauka Univerziteta u Beogradu, gde sam završio osnovne i master studije socijalnog rada, a zatim i psihoterapiju na evropski akreditovanom institutu Asocijacije sistemskih terapeuta.
+            </p>
+            <p>
+              Svoj profesionalni identitet sam oblikovao kroz višegodišnji rad sa osobama koje su preživele kompleksna traumatična iskustva. Od 2021. godine sam rukovodilac Službe za koordinaciju zaštite žrtava trgovine ljudima i tu sam imao prilike da se susrećem sa najsloženijim profesionalnim izazovima, radim u kriznim situacijama i razvijam sistemske modele podrške osobama u najkritičnijim životnim periodima.
+            </p>
+            <p>
+              Rukovodio sam različitim projektima iz ove oblasti, kreirao i sprovodio obuke na temu komunikacije, intervjuisanja i podrške osobama iz različitih korisničkih grupa za psihologe, policiju, tužioce, sudije, socijalne i prosvetne radnike. Organizovao sam brojne međunarodne i domaće stručne skupove.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional Work Section -->
+      <div class="relative mb-16 rounded-[2rem] border border-surface-200/80 bg-gradient-to-br from-surface-50 via-white to-surface-100 p-6 sm:p-8 lg:p-10 overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-primary-100/40 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-56 h-56 bg-accent-100/40 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
+
+        <div class="relative flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-8">
+          <div>
+            <p class="text-sm uppercase tracking-[0.2em] text-accent-600 font-medium mb-2">
+              Profesionalni rad
+            </p>
+            <h2 class="font-heading text-h2 text-primary-900">
+              Seminari, obuke i radionice
+            </h2>
+          </div>
+          <p class="text-text-secondary max-w-2xl leading-relaxed">
+            Kratak prikaz Miroslavljevog profesionalnog rada kroz seminare, stručne obuke, edukativne događaje i radionice.
+          </p>
+        </div>
+
+        <!-- YouTube video -->
+        <div class="relative mb-6 rounded-[1.5rem] overflow-hidden shadow-lg aspect-video">
+          <iframe
+            src="https://www.youtube.com/embed/9q9Q0aol3yM"
+            title="Miroslav Jovanović — video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            class="w-full h-full"
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <!-- Photo grid -->
+        <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5">
+
+          <!-- Large featured -->
+          <figure class="group relative lg:col-span-7 lg:row-span-2 rounded-[1.75rem] overflow-hidden shadow-lg bg-surface-200 min-h-[280px] lg:min-h-[400px]">
+            <Image
+              src={galleryImages[0].src}
+              alt={galleryImages[0].alt}
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              width={1200}
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-950/40 to-transparent"></div>
+          </figure>
+
+          <!-- Side top -->
+          <figure class="group relative lg:col-span-5 rounded-[1.5rem] overflow-hidden shadow-md bg-surface-200 min-h-[200px] lg:min-h-[190px]">
+            <Image
+              src={galleryImages[1].src}
+              alt={galleryImages[1].alt}
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              width={800}
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-950/40 to-transparent"></div>
+          </figure>
+
+          <!-- Side bottom -->
+          <figure class="group relative lg:col-span-5 rounded-[1.5rem] overflow-hidden shadow-md bg-surface-200 min-h-[200px] lg:min-h-[190px]">
+            <Image
+              src={galleryImages[2].src}
+              alt={galleryImages[2].alt}
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              width={800}
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-950/40 to-transparent"></div>
+          </figure>
+
+          <!-- Row 2: 3 images -->
+          {galleryImages.slice(3, 6).map((image) => (
+            <figure class="group relative lg:col-span-4 rounded-[1.5rem] overflow-hidden shadow-md bg-surface-200 min-h-[180px]">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                width={700}
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-primary-950/40 to-transparent"></div>
+            </figure>
+          ))}
+
+          <!-- Row 3: 4 images (gostovanje) -->
+          {galleryImages.slice(6).map((image) => (
+            <figure class="group relative lg:col-span-3 rounded-[1.5rem] overflow-hidden shadow-md bg-surface-200 min-h-[160px]">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                width={600}
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-primary-950/40 to-transparent"></div>
+            </figure>
+          ))}
+
+        </div>
+      </div>
+
+      <!-- Approach -->
+      <div class="space-y-5 text-text-secondary leading-relaxed text-lg mb-12">
+        <p>
+          Na psihoterapiji se obično bavim temama samopouzdanja, slike o sebi, anksioznosti, porodičnih i partnerskih odnosa. Pomažem klijentima da osveste svoje kvalitete, postave granice i počnu da se zauzimaju za sebe, da unaprede svoje roditeljske kapacitete, ponovo se povežu sa svojim partnerom i nauče bolje da komuniciraju.
+        </p>
+        <p>
+          Čini mi se da su moji najveći kvaliteti u radu empatičnost i prirodno neosuđujući pristup, ali to ćete Vi sami najbolje proceniti kada se budemo upoznali.
+        </p>
+        <p>
+          Svakako od mene nećete doživeti osudu niti hladni kriticizam. Obično lako uspostavljam odnos poverenja sa klijentima i nastojim da se osećaju komforno i sigurno tokom seanse, ne da bih im povlađivao, već zato što znam koliko je hrabrosti potrebno da bi se čovek preispitao i napravio promenu i imam veliko poštovanje prema ljudima koji se u to upuste.
+        </p>
+        <p>
+          Nisam jedan od onih terapeuta koji samo slušaju, klimaju glavom i pitaju: „Kako se osećate povodom toga?". Trudim se da aktivno učestvujem u seansi i da što više pružim svojim klijentima. Nastojim da ih podstaknem da naprave iskorak i promenu koju žele, ali sve to tempom koji njima odgovara.
+        </p>
+        <p>
+          Trudim se da budem svestan svojih ograničenja i mana i ne upuštam se u rad na temama za koje nemam kompetencije. Takođe, važna mi je povratna informacija od Vas i uvek želim da čujem mišljenje klijenata o procesu u kojem zajedno učestvujemo.
+        </p>
+        <p class="italic text-primary-800">
+          Čini mi se da je ponekad potrebna samo promena perspektive i sagledavanje svoje situacije iz drugog ugla da bi se pokrenula velika promena. Pozivam Vas da se javite i da pogledamo Vašu situaciju kroz malo drugačiju prizmu.
+        </p>
+      </div>
+
+      <!-- Team note -->
+      <div class="p-6 bg-surface-300 rounded-2xl">
+        <p class="text-text-secondary leading-relaxed">
+          Ja sarađujem i sa drugim, mladim, empatičnim i posvećenim terapeutima, koje mogu da Vam preporučimo u skladu sa Vašim potrebama i oblastima na kojima želite da radite.
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-12 text-center">
+        <a
+          href="/sr/kontakt/"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 text-white font-medium rounded-xl shadow-lg hover:bg-primary-700 transition-all text-lg"
+        >
+          Zakažite besplatne konsultacije
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</PageLayout>

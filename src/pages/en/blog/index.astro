@@ -1,0 +1,63 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import Breadcrumbs from "@/components/common/Breadcrumbs.astro";
+import { getCollection } from "astro:content";
+import { useTranslations } from "@/i18n/utils";
+
+const lang = "en";
+const t = useTranslations(lang);
+
+const posts = (await getCollection("blog", ({ data }) => data.lang === "en" && !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<PageLayout
+  title="Blog"
+  description="A blog about psychotherapy, mental health, partner relationships, and personal growth."
+  lang={lang}
+  alternateUrls={{ sr: "/sr/blog/", en: "/en/blog/" }}
+>
+  <section class="py-12 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <Breadcrumbs lang={lang} items={[{ label: "Blog" }]} />
+      </div>
+
+      <h1 class="font-heading text-h1 lg:text-display text-primary-900 mb-12">
+        {t("blog.title")}
+      </h1>
+
+      <div class="space-y-8">
+        {posts.map((post) => {
+          const slug = post.id.replace("en/", "").replace(".md", "").replace(".mdx", "");
+          const dateStr = post.data.pubDate.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          });
+          return (
+            <article class="group">
+              <a href={`/en/blog/${slug}/`} class="block p-6 rounded-2xl border border-surface-400/30 bg-white hover:border-primary-300 hover:shadow-lg transition-all">
+                <time class="text-sm text-text-muted">{dateStr}</time>
+                <h2 class="font-heading text-h3 text-primary-900 group-hover:text-primary-600 transition-colors mt-2 mb-3">
+                  {post.data.title}
+                </h2>
+                <p class="text-text-secondary line-clamp-2">{post.data.description}</p>
+                <span class="inline-flex items-center gap-1 text-primary-600 font-medium text-sm mt-3">
+                  {t("cta.readMore")}
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </a>
+            </article>
+          );
+        })}
+      </div>
+
+      {posts.length === 0 && (
+        <p class="text-text-muted text-center py-12">No posts published yet.</p>
+      )}
+    </div>
+  </section>
+</PageLayout>

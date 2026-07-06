@@ -1,0 +1,59 @@
+---
+import "@/styles/global.css";
+import SEOHead from "@/components/common/SEOHead.astro";
+import GTMHead from "@/components/common/GTMHead.astro";
+import GTMBody from "@/components/common/GTMBody.astro";
+import type { Lang } from "@/i18n/utils";
+
+interface Props {
+  title: string;
+  description: string;
+  lang: Lang;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  alternateUrls?: { sr: string; en: string };
+  noindex?: boolean;
+  schema?: object | object[];
+}
+
+const { title, description, lang, schema, ...seoProps } = Astro.props;
+const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Favicons & PWA -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#9333ea" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <SEOHead title={title} description={description} lang={lang} {...seoProps} />
+    <GTMHead />
+
+    {schemas.map((s) => (
+      <script is:inline type="application/ld+json" set:html={JSON.stringify(s)} />
+    ))}
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <GTMBody />
+    <slot />
+  </body>
+</html>
