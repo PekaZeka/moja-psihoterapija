@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary: Purple/Violet (from flyer) */
+  --color-primary-50: #faf5ff;
+  --color-primary-100: #f3e8ff;
+  --color-primary-200: #e9d5ff;
+  --color-primary-300: #d8b4fe;
+  --color-primary-400: #c084fc;
+  --color-primary-500: #a855f7;
+  --color-primary-600: #9333ea;
+  --color-primary-700: #7e22ce;
+  --color-primary-800: #6b21a8;
+  --color-primary-900: #581c87;
+  --color-primary-950: #3b0764;
+
+  /* Accent: Cyclamen/Magenta-Pink (from flyer) */
+  --color-accent-50: #fff1f3;
+  --color-accent-100: #ffe4e8;
+  --color-accent-200: #fecdd5;
+  --color-accent-300: #fda4b4;
+  --color-accent-400: #fe92ae;
+  --color-accent-500: #f65d82;
+  --color-accent-600: #fd2450;
+  --color-accent-700: #be123c;
+  --color-accent-800: #9f1239;
+  --color-accent-900: #881337;
+
+  /* Surface: Beige/Warm (from flyer) */
+  --color-surface-50: #fffbf7;
+  --color-surface-100: #fddac2;
+  --color-surface-200: #f8e8d6;
+  --color-surface-300: #f1f0f3;
+  --color-surface-400: #e8e5ea;
+  --color-surface-500: #d5d0d8;
+
+  /* Text colors */
+  --color-text-primary: #1a0a2e;
+  --color-text-secondary: #4a3660;
+  --color-text-muted: #7a6b8a;
+  --color-text-inverse: #ffffff;
+
+  /* Font families */
+  --font-heading: "DM Serif Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  /* Font sizes */
+  --text-display: 3.5rem;
+  --text-h1: 2.5rem;
+  --text-h2: 2rem;
+  --text-h3: 1.5rem;
+  --text-h4: 1.25rem;
+  --text-body: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-50);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+/* Scroll reveal animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary-600);
+  outline-offset: 2px;
+}

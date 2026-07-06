@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mojapsihoterapija.com/sitemap-index.xml
