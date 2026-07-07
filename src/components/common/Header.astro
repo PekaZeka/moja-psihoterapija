@@ -109,36 +109,17 @@ const currentPath = Astro.url.pathname;
   <div id="mobile-menu" class="hidden lg:hidden border-t border-surface-400/30 bg-white">
     <nav class="max-w-7xl mx-auto px-4 py-4 space-y-1" aria-label="Mobile navigation">
       {navItems.map((item) => (
-        <>
-          <a
-            href={item.href}
-            class:list={[
-              "block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors",
-              currentPath.startsWith(item.href)
-                ? "text-primary-700 bg-primary-50"
-                : "text-text-secondary hover:text-primary-700 hover:bg-primary-50/50",
-            ]}
-          >
-            {item.label}
-          </a>
-          {"children" in item && (
-            <div class="pl-4 space-y-1">
-              {item.children.map((child) => (
-                <a
-                  href={child.href}
-                  class:list={[
-                    "block px-4 py-2 rounded-lg text-sm transition-colors",
-                    currentPath === child.href
-                      ? "text-primary-700 bg-primary-50"
-                      : "text-text-muted hover:text-primary-700 hover:bg-primary-50/50",
-                  ]}
-                >
-                  {child.label}
-                </a>
-              ))}
-            </div>
-          )}
-        </>
+        <a
+          href={item.href}
+          class:list={[
+            "block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors",
+            currentPath.startsWith(item.href)
+              ? "text-primary-700 bg-primary-50"
+              : "text-text-secondary hover:text-primary-700 hover:bg-primary-50/50",
+          ]}
+        >
+          {item.label}
+        </a>
       ))}
     </nav>
   </div>

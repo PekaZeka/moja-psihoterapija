@@ -3,6 +3,7 @@ import PageLayout from "@/layouts/PageLayout.astro";
 import Breadcrumbs from "@/components/common/Breadcrumbs.astro";
 import { SITE } from "@/lib/constants";
 import { useTranslations } from "@/i18n/utils";
+import ViberIcon from "@/components/common/ViberIcon.astro";
 
 const lang = "sr";
 const t = useTranslations(lang);
@@ -89,7 +90,7 @@ const t = useTranslations(lang);
             </a>
             <a href={SITE.viber} target="_blank" rel="noopener noreferrer" data-event="viber_click" class="flex items-center gap-3 text-text-secondary hover:text-violet-600 transition-colors">
               <div class="w-10 h-10 bg-violet-100 rounded-lg flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-violet-600" fill="currentColor" viewBox="0 0 24 24"><path d="M11.997 0C5.372 0 .013 5.362.013 11.988c0 2.47.74 4.76 2.013 6.676L.523 23.262a.5.5 0 00.638.638l4.598-1.503a11.957 11.957 0 006.238 1.616c6.625 0 11.984-5.362 11.984-11.988C24 5.362 18.622 0 11.997 0zm5.93 16.52c-.237.663-.686 1.222-1.291 1.571-.607.35-1.298.497-1.982.428-2.208-.328-4.25-1.438-5.745-3.136-1.496-1.696-2.293-3.89-2.227-6.133a4.05 4.05 0 01.424-1.734 3.108 3.108 0 011.135-1.218c.405-.24.877-.336 1.34-.271.155.022.297.099.401.215.443.486 1.032 1.547 1.28 2.185.117.3.059.64-.152.887-.078.09-.172.166-.276.222-.104.057-.217.096-.334.116l-.01.002c-.133.026-.257.08-.365.16-.108.082-.197.186-.259.306-.062.12-.095.254-.095.389v.002c.012.53.32 1.408 1.09 2.26.773.852 1.546 1.145 2.064 1.158.134 0 .268-.03.389-.09.12-.06.225-.148.308-.255.082-.106.14-.229.168-.36l.003-.011c.021-.117.06-.23.118-.334.057-.104.135-.197.228-.274.25-.21.591-.265.893-.144.638.252 1.693.852 2.172 1.308.113.105.188.248.208.403.059.46-.073.933-.31 1.596z"/></svg>
+                <ViberIcon class="w-5 h-5 text-violet-600" />
               </div>
               <span>Viber</span>
             </a>
