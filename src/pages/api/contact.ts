@@ -7,6 +7,9 @@ export const prerender = false;
 const env = (key: string): string | undefined =>
   (globalThis as any)?.process?.env?.[key] ?? (import.meta.env as any)?.[key];
 
+const isValidEmail = (value: unknown): value is string =>
+  typeof value === "string" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
 const escapeHtml = (value: unknown): string =>
   String(value ?? "")
     .replace(/&/g, "&amp;")
@@ -56,7 +59,7 @@ export const POST: APIRoute = async ({ request }) => {
     const { error } = await resend.emails.send({
       from: CONTACT_FROM,
       to: CONTACT_EMAIL,
-      replyTo: email ? String(email) : undefined,
+      replyTo: isValidEmail(email) ? email : undefined,
       subject: `Nova poruka sa sajta od: ${name}`,
       html: `
         <h2>Nova poruka sa sajta</h2>
