@@ -2,6 +2,8 @@ import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import node from "@astrojs/node";
+import react from "@astrojs/react";
+import keystatic from "@keystatic/astro";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
@@ -13,16 +15,13 @@ export default defineConfig({
   output: "static",
   adapter: node({ mode: "standalone" }),
 
-  i18n: {
-    defaultLocale: "sr",
-    locales: ["sr", "en"],
-    routing: {
-      prefixDefaultLocale: true,
-      redirectToDefaultLocale: false,
-    },
-  },
+  // Locale routing is file-based (src/pages/sr/, src/pages/en/) with hardcoded
+  // URLs; Astro's i18n routing config isn't used and it 404-flags non-locale
+  // injected routes like /keystatic, so it stays off.
 
   integrations: [
+    react(),
+    keystatic(),
     mdx(),
     sitemap({
       i18n: {
